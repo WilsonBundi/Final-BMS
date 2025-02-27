@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="/" class="logo">BloodBank Manager</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        <div class="nav-links">
+          <a href="donors.html" class="nav-link">Donor Registration</a>
+          <a href="hospitals.html" class="nav-link">Hospital Registration</a>
+          <a href="inventory.html" class="nav-link">Inventory</a>
+          <a href="statistics.html" class="nav-link">Reports</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <div class="container">
+      <h1 class="dashboard-title">Blood Bank Dashboard</h1>
+      
+      <div class="dashboard-cards">
+        <div class="card">
+          <div class="card-header">
+            <span>Total Blood Units</span>
+            <span class="icon">💧</span>
+          </div>
+          <div class="card-content">537</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span>Registered Donors</span>
+            <span class="icon">👥</span>
+          </div>
+          <div class="card-content">1,245</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span>Partner Hospitals</span>
+            <span class="icon">🏥</span>
+          </div>
+          <div class="card-content">8</div>
+        </div>
+        <div class="card critical">
+          <div class="card-header">
+            <span>Critical Shortage</span>
+            <span class="icon">⚠️</span>
+          </div>
+          <div class="card-content">2 Types</div>
+        </div>
+      </div>
+
+      <div class="dashboard-charts">
+        <div class="chart-card">
+          <h2>Blood Type Inventory</h2>
+          <div class="chart-container">
+            <canvas id="bloodTypeChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h2>Recent Activity</h2>
+          <div class="activity-list">
+            <div class="activity-item">
+              <p class="activity-title">New Donation</p>
+              <p class="activity-detail">Type A+ (3 units)</p>
+              <span class="activity-time">2 hours ago</span>
+            </div>
+            <div class="activity-item">
+              <p class="activity-title">Hospital Request</p>
+              <p class="activity-detail">City Hospital - Type O-</p>
+              <span class="activity-time">5 hours ago</span>
+            </div>
+            <div class="activity-item">
+              <p class="activity-title">Low Stock Alert</p>
+              <p class="activity-detail">AB- below threshold</p>
+              <span class="activity-time">1 day ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="JS/scripts.js"></script>
+</body>
+</html>

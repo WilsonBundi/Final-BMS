@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Inventory Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Blood Inventory Management</h1>
+    
+    <div class="inventory-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Blood Type</th>
+            <th>Quantity (Units)</th>
+            <th>Status</th>
+            <th>Location</th>
+            <th>Last Updated</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryBody">
+          <!-- Inventory rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="JS/inventory.js"></script>
+</body>
+</html>

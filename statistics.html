@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics & Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="statistics.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Analytics & Reports</h1>
+    
+    <!-- Key Metrics -->
+    <div class="metrics-grid">
+      <div class="card">
+        <div class="metric-content">
+          <p class="metric-label">Monthly Donations</p>
+          <h3 class="metric-value">245</h3>
+          <div class="metric-trend">
+            <span class="trend-icon">↑</span>
+            <span class="trend-text">12%</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="metric-content">
+          <p class="metric-label">Hospital Requests</p>
+          <h3 class="metric-value">182</h3>
+          <div class="metric-trend negative">
+            <span class="trend-icon">↓</span>
+            <span class="trend-text">3%</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="metric-content">
+          <p class="metric-label">Fulfillment Rate</p>
+          <h3 class="metric-value">94%</h3>
+          <div class="metric-icon">📊</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tabs-header">
+        <button class="tab-button active" data-tab="inventory">Inventory Analysis</button>
+        <button class="tab-button" data-tab="donations">Donation Trends</button>
+        <button class="tab-button" data-tab="requests">Hospital Requests</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tabs-content">
+        <div id="inventory" class="tab-pane active">
+          <div class="card">
+            <h2>Blood Type Distribution</h2>
+            <div class="chart-container">
+              <canvas id="bloodTypeChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="grid">
+            <div class="card">
+              <h3>Critical Levels Alert</h3>
+              <div class="alert-list">
+                <div class="alert-item">
+                  <span class="alert-type">AB-</span>
+                  <span class="alert-status critical">12 units (Critical)</span>
+                </div>
+                <div class="alert-item">
+                  <span class="alert-type">B-</span>
+                  <span class="alert-status low">32 units (Low)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <h3>Expiration Summary</h3>
+              <div class="expiration-list">
+                <div class="expiration-item">
+                  <span class="expiration-label">Expiring in 7 days</span>
+                  <span class="expiration-value">15 units</span>
+                </div>
+                <div class="expiration-item">
+                  <span class="expiration-label">Expiring in 30 days</span>
+                  <span class="expiration-value">48 units</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="donations" class="tab-pane">
+          <div class="card">
+            <h2>Monthly Donation Trends</h2>
+            <p class="placeholder-text">
+              Select the "Donation Trends" tab to view detailed donation statistics and patterns.
+            </p>
+          </div>
+        </div>
+
+        <div id="requests" class="tab-pane">
+          <div class="card">
+            <h2>Hospital Request Analysis</h2>
+            <p class="placeholder-text">
+              Select the "Hospital Requests" tab to view detailed request patterns and fulfillment rates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="JS/statistics.js"></script>
+</body>
+</html>

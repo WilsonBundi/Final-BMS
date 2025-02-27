@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="donors.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Donor Registration</h1>
+        <p>Register as a blood donor and help save lives. All information will be kept confidential.</p>
+      </div>
+      <div class="card-content">
+        <form id="donorForm" class="form">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required minlength="2">
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required minlength="10">
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bloodType">Blood Type</label>
+              <select id="bloodType" name="bloodType" required>
+                <option value="">Select blood type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" placeholder="25" required min="18">
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" name="weight" placeholder="70" required min="50">
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-button">Register as Donor</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="donor-list">
+      <h2>Registered Donors</h2>
+      <table id="donorTable">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Blood Type</th>
+            <th>Age</th>
+            <th>Weight (kg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Donor rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="JS/donors.js"></script>
+</body>
+</html>

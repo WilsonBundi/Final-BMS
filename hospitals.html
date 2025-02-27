@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hospitals.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Hospital Registration</h1>
+        <p>Register your hospital to access blood bank services. Please provide accurate information for verification.</p>
+      </div>
+      <div class="card-content">
+        <form id="hospitalForm" class="form">
+          <div class="form-group">
+            <label for="hospitalName">Hospital Name</label>
+            <input type="text" id="hospitalName" name="hospitalName" placeholder="General Hospital" required minlength="2">
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="hospital@example.com" required>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required minlength="10">
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Hospital Address</label>
+            <textarea id="address" name="address" placeholder="Enter complete hospital address" required minlength="10"></textarea>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="licenseNumber">Hospital License Number</label>
+            <input type="text" id="licenseNumber" name="licenseNumber" placeholder="License number" required minlength="5">
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactPerson">Contact Person</label>
+              <input type="text" id="contactPerson" name="contactPerson" placeholder="Full name" required minlength="2">
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="emergencyPhone">Emergency Contact Number</label>
+              <input type="tel" id="emergencyPhone" name="emergencyPhone" placeholder="+1 (555) 000-0000" required minlength="10">
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-button">Register Hospital</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <script src="JS/hospital.js"></script>
+</body>
+</html>
